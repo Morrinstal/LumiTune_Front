@@ -1,0 +1,166 @@
+.artistOverviewCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: 382px;
+    height: 615px;
+    left: calc(50% - 382px/2);
+    top: 561px;
+
+    background: #161616;
+}
+
+.artistBanner {
+    width: 382px;
+    height: 323px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    object-fit: cover;
+}
+
+.artistOverviewNameBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px 8px;
+    gap: 10px;
+
+    width: 380px;
+    height: 30px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.artistOverviewName {
+    height: 30px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+
+    display: flex;
+    align-items: flex-start;
+    text-align: flex-start;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.listenersAndFollow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 8px;
+    gap: 64px;
+
+    width: 382px;
+    height: 21px;
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.listenersOverview {
+    width: 205px;
+    height: 21px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.artistOverviewCard__followBtn {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 10px;
+    gap: 10px;
+
+    width: 80px;
+    height: 19px;
+
+    background: #3A454C;
+    border: 1px solid #87B0CE;
+    border-radius: 6px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    cursor: pointer;
+}
+
+.artistOverviewDescBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 8px;
+  gap: 10px;
+  width: 382px;
+  height: 215px;
+  flex: none;
+  order: 3;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.artistOverviewDesc {
+  width: 366px;
+  height: 215px;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+
+  color: rgba(255, 255, 255, 0.9);
+}

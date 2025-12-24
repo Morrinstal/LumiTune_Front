@@ -1,0 +1,40 @@
+.filterChip {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 24px;
+    width: 102px;
+    height: 33px;
+
+    background: rgba(58, 69, 76, 0.2);
+    border: 1px solid rgba(166, 218, 255, 0.3);
+    border-radius: 6px;
+
+    cursor: pointer;
+    overflow: hidden;
+}                                                              
+
+.filterChip:hover {
+    background: rgba(58, 69, 76, 0.5);
+}
+
+.chipLabel {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #F0F0F0;
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+

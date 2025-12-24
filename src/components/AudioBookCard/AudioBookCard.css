@@ -1,0 +1,130 @@
+.audioBookCard {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+
+  width: 959px;
+  height: 216px;
+}
+
+.abLink {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-decoration: none;
+  gap: 24px;
+}
+
+.abCover {
+  width: 216px;
+  height: 216px;
+
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.abBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 723px;
+  min-width: 0;
+  height: 215px;
+  gap: 6px;
+}
+
+.abHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.abDivider{
+  height: 0.8em;
+  object-fit: contain;
+  align-self: center;
+}
+
+.abTitle{
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color:#fff;
+}
+
+.abAuthor {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ACBAD8;
+}
+
+
+.abGenre {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color:#D9E5FF;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.abDesc {
+  margin:0;
+  font-family:'Open Sans', sans-serif;
+  font-weight:400;
+  font-size:14px;
+  line-height:19px;
+  color:#ACBAD8;
+  -webkit-text-fill-color:#ACBAD8;
+
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  overflow-wrap:anywhere;
+}
+
+.abFooter {
+  margin-top: auto;             
+  display: flex;
+  flex-direction: column;
+                      
+  width: auto;
+  height: auto;
+
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: rgba(255, 255, 255, 0.8);
+}

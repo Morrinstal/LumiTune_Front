@@ -1,0 +1,127 @@
+.mediaListItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 13px;
+
+    position: relative;
+    width: 366px;
+    height: 64px;
+    left: 14px;
+
+    background: rgba(24, 43, 73, 0.3);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    text-align: left;
+}
+.mediaListItem:hover{ 
+    background:rgba(24,43,73,.45); 
+}
+
+.mediaListItemIndex {
+    width: 24px;
+    max-width: 36px;
+    height: 24px;
+
+    font-family: 'Maven Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.mediaListItemCover {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.mediaListItemContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    
+    width: 158px;
+    height: 35px;
+    min-width:0;
+
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+.mediaListItemTitle {
+    width: 158px;
+    height: 19px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.mediaListItemSubTitle {
+    width: 158px;
+    height: 16px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.mediaListItemDuration {
+    width: 47px;
+    height: 16px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #EFFBFF;
+
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+}
+

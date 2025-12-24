@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Bajawa Demo';
+  src: url('/fonts/BajawaDemo.ttf') format('truetype');
+}
+
+* { box-sizing: border-box; }
+
+.header {
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(8px, 4vw, 48px);
+
+  width: 100%;
+  min-height: 64px;
+  padding-inline: clamp(16px, 4vw, 40px);
+
+  background: #061420;
+  border-bottom: 0.5px solid #A6DAFF;
+}
+
+.headerLeftPart{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoContainer{
+  display: flex;
+  align-items: center;
+  padding-inline: 8px;
+}
+
+.logoImage{
+  width: 62px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.logoText{
+  font-family: 'Bajawa Demo', sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 2.2vw, 24px);
+  line-height: 1.4;
+  color: #40CCFF;
+}
+
+.headerRightPart{
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 4vw, 40px);
+}
+
+.headerLinks{
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 5vw, 48px);
+}
+
+.headerLinks a{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(14px, 1.6vw, 20px);
+  line-height: 1.5;
+  text-decoration: none;
+  color: #88BCD6;
+}
+
+.headerDivider{
+  width: 1px;
+  height: 32px;
+  background: #93E8FF;
+  opacity: .9;
+}
+
+.headerRegistration{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  min-height: 44px;
+
+  background: rgba(0, 28, 52, 0.7);
+  border: 1px solid #93E8FF;
+  border-radius: 10px;
+}
+
+.headerRegistration a{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(14px, 1.6vw, 20px);
+  color: #C0F6FF;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px){
+  .headerLinks { gap: 24px; }
+  .headerDivider{ display: none; }
+  .headerRegistration{ padding: 8px 16px; }
+}
+
+@media (max-width: 768px){
+  .logoImage { width: 48px; height: 44px; }
+  .logoText { font-size: 18px; }
+  .headerLinks { display: none; }
+  .headerRightPart{ gap: 12px; }
+}
+
+
+
+

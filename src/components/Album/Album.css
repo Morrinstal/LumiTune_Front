@@ -1,0 +1,339 @@
+.album {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    isolation: isolate;
+
+    position: absolute;
+    width: 1608px;
+    height: 2390px;
+    left: 302px;
+    top: 72px;
+
+    background: rgba(12, 12, 12, 0.2);
+
+    border: 1px solid rgba(166, 218, 255, 0.6);
+    border-radius: 16px;
+}
+
+.albumInnerBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+
+    width: 1608px;
+    height: 2366px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+}
+
+.albumHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 24px;
+
+    width: 1524px;
+    height: 224px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.albumCover {
+    width: 224px;
+    height: 224px;
+    border-radius: 10px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    object-fit: cover;
+}
+
+.albumTitleBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 1250px;
+    height: 163px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.albumUpperTitle {
+    width: 180px;
+    height: 16px;
+
+    font-family: 'Maven Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    color: #93A1B8;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.albumTitle {
+    width: 1250px;
+    height: 75px;
+
+    font-family: 'Maven Pro', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.albumBody {
+    width: 1608px;
+    height: 2118px;
+
+    background: rgba(1, 11, 15, 0.2);
+    border-radius: 20px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.albumBodyContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 36px;
+
+    position: relative;
+    width: 1524px;
+    height: 2050px;
+    left: 54px;
+    top: 26px;
+}
+
+.albumBtnArtistSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 28px;
+
+    width: 1524px;
+    height: 120px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.albumBtnBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+
+    margin: 0;
+    width: 202px;
+    height: 60px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.albumBtnPlayStop {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    gap: 4px;
+
+    width: 60px;
+    height: 60px;
+
+    background: rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay, normal;
+    border: 3px solid #93D3E7;
+    border-radius: 1000px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+}
+
+.albumBtnMix {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 2px 1px;
+    gap: 10px;
+
+    width: 47px;
+    height: 47px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    background: transparent;      
+    border: none;                 
+    outline: none;                
+    cursor: pointer;
+}
+
+.albumBtnAdd {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+    background: transparent;
+    border: none;                 
+    outline: none; 
+    cursor: pointer;
+}
+
+.albumArtistBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+
+    width: 1524px;
+    height: 120px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.albumArtistCover {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    object-fit: cover;
+}
+
+.albumArtistInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 13px;
+
+    width: 645px;
+    height: 57px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.albumArtistTitle {
+    width: 645px;
+    height: 16px;
+
+    font-family: 'Maven Pro', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    color: #D1D1D1;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.albumArtistSubtitle {
+    width: 645px;
+    height: 28px;
+
+    font-family: 'Maven Pro', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+
+    color: #BFEDFD;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.albumTrackListSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    gap: 12px;
+    width: 1524px;
+    height: 1750px;
+    left: 0px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}

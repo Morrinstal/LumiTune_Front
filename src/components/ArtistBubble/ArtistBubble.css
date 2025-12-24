@@ -1,0 +1,58 @@
+.artistBubble {
+  width: 242px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;               
+  color: inherit;
+}
+
+.avatarBubble {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+}
+
+.imgBubble {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.infoBubble {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.artistNameBubble {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #F0F0F0;
+}
+
+.listenersBubble {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #92BEE8;
+  opacity: .95;
+}
+
+.artistBubble:hover .avatarBubble {
+  box-shadow: 0 0 24px rgba(0,0,0,.35);
+  transform: translateY(-1px);
+  transition: .18s ease;
+}

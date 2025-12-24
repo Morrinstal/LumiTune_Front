@@ -1,0 +1,430 @@
+.myMediatheque {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1608px;
+    height: 1980px;
+    left: 302px;
+    top: 72px;
+
+    background: rgba(12, 12, 12, 0.2);
+
+    border: 1px solid rgba(166, 218, 255, 0.6);
+    border-radius: 20px;
+}
+
+.mediathequeContentBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 78px;
+
+    position: absolute;
+    width: 1482px;
+    height: 1900px;
+    
+    left: 60px;
+    top: 70px;
+}
+
+.mediathequeTitleBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px 0px 0px;
+    gap: 15px;
+
+    width: 1482px;
+    height: 59px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.mediathequeTitle {
+    width: 346px;
+    height: 59px;
+
+    font-family: 'Core Sans A 55 Medium', sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 48px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.myFavTracksSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 1482px;
+    height: 297px;
+    gap: 24px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myFavTracksTitleBlock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    padding: 10px;
+    gap: 10px;
+
+    width: 1482px;
+    height: 59px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myFavTracksTitle {
+    width: 257px;
+    height: 39px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #BEF4FF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.directionButtonsBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+
+    width: 56px;
+    height: 24px;
+
+    transform: rotate(-180deg);
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.leftArrow,
+.rightArrow {
+    width: 12px;
+    height: 24px;
+}
+
+.myFavSongCardsGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    padding: 0px 4px;
+    gap: 24px;
+
+    width: 1482px;
+    height: 214px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myPlaylistsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 1482px;
+    height: 306px;
+    gap: 24px;
+    
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myPlaylistsTitleBlock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    padding: 10px;
+    gap: 10px;
+
+    width: 1482px;
+    height: 59px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myPlaylistsTitle {
+    height: 39px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #BEF4FF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.myPlaylistsCardsGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    padding: 0px 4px;
+    gap: 24px;
+
+    width: 1482px;
+    height: 223px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myFavArtistsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 1482px;
+    height: 351px;
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myFavArtistsTitleBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    gap: 926px;
+
+    width: 1482px;
+    height: 39px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myFavArtistsTitle {
+    width: 392px;
+    height: 39px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 39px;
+
+    color: #BEF4FF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.myFavArtistsCardsGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+
+    width: 1482px;
+    height: 287px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myFavPodcastsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 1482px;
+    height: 513px;
+
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+.myFavPodcastsTitleBlock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    padding: 10px;
+    gap: 10px;
+
+    width: 1482px;
+    height: 59px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myFavPodcastsTitle {
+    width: 1066px;
+    height: 39px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #BEF4FF;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myFavPodcastsCardsGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+
+    width: 1482px;
+    height: 450px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+
+.myFavAudiobooksSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 1482px;
+    height: 279px;
+
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+.myFavAudiobooksTitleBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    gap: 926px;
+
+    width: 1482px;
+    height: 39px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myFavAudiobooksTitle {
+    height: 39px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #BEF4FF;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.myFavAudiobooksCardsGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 23px;
+
+    width: 1066px;
+    height: 216px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}

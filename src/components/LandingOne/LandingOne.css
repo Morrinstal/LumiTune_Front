@@ -1,0 +1,1020 @@
+.landingOne {
+  position: relative;
+  width: 100%;
+  height: 1096px;
+  background: linear-gradient(180deg, #0B0F1C 0%, #1B2040 100%);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.landingContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gradientOverlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.lumituneLogoText {
+  position: absolute;
+  width: 730.67px;
+  height: 411px;
+  left: 185px;
+  top: 45px;
+  mix-blend-mode: hard-light;
+  pointer-events: none;
+}
+
+.descriptionBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+
+  position: absolute;
+  width: 681px;
+  height: 318px;
+  left: 220px;
+  top: calc(50% - 318px/2 + 0.5px - 40px);
+  z-index: 2;
+}
+
+.descriptionSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 21px;
+  width: 681px;
+  height: 202px;
+}
+
+.buttonsSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 51px;
+  width: 671px;
+  height: 68px;
+}
+
+.mainHeading {
+  width: 681px;
+  height: 154px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  display: flex;
+  align-items: center;
+  color: #AFF0F2;
+}
+
+.subHeading {
+  width: 681px;
+  height: 27px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: rgba(154, 181, 255, 0.7);
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 20px;
+  gap: 10px;
+  width: 310px;
+  height: 68px;
+  border-radius: 10px;
+}
+
+.buttonPrimary { background: #02192E; }
+.buttonSecondary { background: #2BD9F2; }
+
+.buttonPrimary a,
+.buttonSecondary a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-decoration: none;
+}
+
+.buttonPrimary a { color: #2BD9F2; width: 199px; }
+.buttonSecondary a { color: #000311; width: 213px; }
+
+.stairs {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;                                 
+  top: auto;
+  width: min(1880px, calc(100% - 40px));
+  height: 160px;
+  z-index: 1;
+}
+.lumikBigImage {
+  position: absolute;
+  bottom: 0;                
+  left: 835px;               
+  width: 1035px;
+  height: auto;             
+  z-index: 2;
+}
+
+@media (max-width: 1440px) {
+  .mainHeading { font-size: 56px; line-height: 68px; }
+  .subHeading { font-size: 18px; line-height: 26px; }
+
+  .descriptionBlock { left: 140px; }
+  .lumituneLogoText { left: 120px; transform: scale(0.9); transform-origin: top left; }
+
+  .lumikBigImage { left: 760px; transform: scale(0.9); transform-origin: top left; }
+  .stairs {
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .landingOne {
+    height: calc(100vh - 64px);
+  }
+
+  .lumituneLogoText {
+    position: static;
+    width: min(60vw, 520px);
+    height: auto;
+    margin: 24px auto 0;
+    display: block;
+    mix-blend-mode: normal;
+  }
+
+  .descriptionBlock {
+    position: static;
+    width: min(90vw, 760px);
+    height: auto;
+    margin: 24px auto 0;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    z-index: 3;
+  }
+
+  .descriptionSection {
+    width: 100%;
+    align-items: center;
+  }
+
+  .mainHeading {
+    width: 100%;
+    height: auto;
+    font-size: 44px;
+    line-height: 1.2;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .subHeading {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    line-height: 1.5;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .buttonsSection {
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .stairs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;           
+    width: 100%;
+    height: auto;
+    top: auto;
+    z-index: 1;
+  }
+
+  .lumikBigImage {
+    position: absolute;
+    left: 50%;
+    bottom: 0;            
+    top: auto;
+    transform: translateX(-50%);
+    width: min(70vw, 620px);
+    height: auto;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 900px) {
+  .landingOne {
+    height: calc(100vh - 64px);
+  }
+
+  .lumituneLogoText {
+    position: static;
+    width: 55vw;
+    height: auto;
+    margin: 24px auto 0;
+    display: block;
+    mix-blend-mode: normal;
+  }
+
+  .descriptionBlock {
+    position: static;
+    width: 80%;
+    height: auto;
+    margin: 24px auto 0;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+    z-index: 3;
+  }
+
+  .mainHeading {
+    font-size: 38px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .subHeading {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .buttonsSection {
+    width: 100%;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 220px;
+    height: 56px;
+  }
+
+  .lumikBigImage {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: min(55vw, 500px);
+    height: auto;
+    z-index: 1;
+  }
+
+  .stairs {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .landingOne {
+    height: calc(100vh - 64px);
+  }
+
+  .lumituneLogoText {
+    width: min(70vw, 420px);
+    margin-top: 16px;
+  }
+
+  .descriptionBlock {
+    width: min(92vw, 520px);
+    gap: 20px;
+  }
+
+  .mainHeading { font-size: 32px; line-height: 1.25; }
+  .subHeading  { font-size: 16px; line-height: 1.5;  }
+
+  .buttonsSection {
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .buttonPrimary, .buttonSecondary {
+    width: 100%;
+    height: 56px;
+  }
+  .buttonPrimary a, .buttonSecondary a {
+    font-size: 20px;
+    line-height: 24px;
+    width: auto;
+    padding: 0 8px;
+  }
+
+  .lumikBigImage,
+  .stairs {
+    display: none;
+  }
+}
+
+@media (min-width: 980px) and (max-width: 1100px) and (max-height: 700px) {
+  .landingOne {
+    height: calc(100vh - 64px);
+  }
+
+  .lumituneLogoText {
+    position: absolute;
+    left: 40px;
+    top: 16px;
+    width: clamp(340px, 34vw, 420px);
+    height: auto;
+    mix-blend-mode: normal;
+  }
+
+  .descriptionBlock {
+    position: absolute;
+    left: 60px;
+    top: clamp(180px, 34vh, 260px);
+    width: min(520px, 50vw);
+    height: auto;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+    z-index: 3;
+  }
+
+  .descriptionSection { width: 100%; height: auto; }
+
+  .mainHeading {
+    width: 100%;
+    height: auto;
+    font-size: clamp(28px, 3.6vw, 36px);
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .subHeading {
+    width: 100%;
+    height: auto;
+    font-size: clamp(14px, 1.7vw, 16px);
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  .buttonsSection {
+    width: 100%;
+    gap: 16px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 220px;
+    height: 52px;
+  }
+
+  .buttonPrimary a,
+  .buttonSecondary a {
+    font-size: 18px;
+    line-height: 22px;
+    width: auto;
+    padding: 0 8px;
+  }
+
+  .lumikBigImage {
+    position: absolute;
+    right: clamp(0px, 1vw, 16px);
+    bottom: 0;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: clamp(420px, 47vw, 540px);
+    height: auto;
+    z-index: 2;
+  }
+
+  .stairs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    height: auto;
+    transform: none;
+    z-index: 1;
+  }
+}
+
+@media (width: 768px) and (height: 1024px) {
+  .landingOne { height: calc(100vh - 64px); }
+  .lumikBigImage,
+  .stairs { display: none !important; }
+
+  .descriptionBlock { margin-bottom: 24px; }
+}
+
+@media (width: 820px) and (height: 1180px) {
+  .landingOne { height: calc(100vh - 64px); }
+
+  .lumikBigImage {
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(68vw, 580px);
+    height: auto;
+  }
+
+  .stairs {
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+  }
+
+  .mainHeading { font-size: 40px; line-height: 1.25; }
+  .subHeading  { font-size: 17px; line-height: 1.45; }
+  .buttonsSection { gap: 18px; }
+}
+
+@media (width: 1024px) and (height: 1366px) {
+  .landingOne {
+    height: calc(100vh - 64px);
+  }
+
+  .lumituneLogoText {
+    position: static;
+    display: block;
+    width: min(75vw, 720px);
+    height: auto;
+    margin: 48px auto 0;
+    mix-blend-mode: normal;
+  }
+
+  .descriptionBlock {
+    position: static;
+    width: min(80vw, 820px);
+    margin: 48px auto 0;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    z-index: 3;
+  }
+
+  .descriptionSection {
+    width: 100%;
+    align-items: center;
+  }
+
+  .mainHeading {
+    font-size: 56px;
+    line-height: 1.2;
+    text-align: center;
+    color: #AFF0F2;
+  }
+
+  .subHeading {
+    font-size: 22px;
+    line-height: 1.5;
+    color: rgba(154, 181, 255, 0.8);
+    text-align: center;
+  }
+
+  .buttonsSection {
+    width: 100%;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 300px;
+    height: 72px;
+    border-radius: 12px;
+  }
+
+  .buttonPrimary a,
+  .buttonSecondary a {
+    font-size: 26px;
+    line-height: 30px;
+    width: auto;
+    padding: 0 12px;
+  }
+
+  .lumikBigImage {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    width: min(55vw, 780px);
+    height: auto;
+    z-index: 2;
+  }
+
+  .stairs {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+}
+
+@media (width: 912px) and (height: 1368px) {
+  .landingOne { height: calc(100vh - 64px); }
+
+  .lumituneLogoText {
+    position: static;
+    display: block;
+    width: min(72vw, 660px);
+    height: auto;
+    margin: 44px auto 0;
+    mix-blend-mode: normal;
+  }
+
+  .descriptionBlock {
+    position: static;
+    width: min(82vw, 760px);
+    margin: 44px auto 0;
+    align-items: center;
+    text-align: center;
+    gap: 36px;
+    z-index: 3;
+  }
+
+  .descriptionSection { width: 100%; align-items: center; }
+
+  .mainHeading {
+    font-size: 52px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .subHeading {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .buttonsSection {
+    width: 100%;
+    gap: 26px;
+    justify-content: center;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 280px;
+    height: 68px;
+    border-radius: 12px;
+  }
+
+  .buttonPrimary a,
+  .buttonSecondary a {
+    font-size: 24px;
+    line-height: 28px;
+    padding: 0 12px;
+    width: auto;
+  }
+
+  .lumikBigImage {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    width: min(65vw, 700px);
+    height: auto;
+    z-index: 2;
+  }
+
+  .stairs {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+}
+
+@media (width: 1280px) and (height: 800px) {
+  .landingOne { height: calc(100vh - 64px); }
+
+  .lumituneLogoText {
+    position: absolute;
+    left: 60px;
+    top: 20px;
+    width: clamp(420px, 38vw, 520px);
+    height: auto;
+    mix-blend-mode: normal;
+  }
+
+  .descriptionBlock {
+    position: absolute;
+    left: 90px;
+    top: clamp(220px, 34vh, 280px);
+    width: min(560px, 52vw);
+    height: auto;
+    align-items: flex-start;
+    text-align: left;
+    gap: 22px;
+    z-index: 3;
+  }
+
+  .descriptionSection { width: 100%; height: auto; }
+
+  .mainHeading {
+    width: 100%;
+    height: auto;
+    font-size: clamp(36px, 3.4vw, 44px);
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .subHeading {
+    width: 100%;
+    height: auto;
+    font-size: clamp(16px, 1.6vw, 18px);
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  .buttonsSection {
+    width: 100%;
+    gap: 18px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 240px;
+    height: 56px;
+  }
+
+  .buttonPrimary a,
+  .buttonSecondary a {
+    font-size: 20px;
+    line-height: 24px;
+    width: auto;
+    padding: 0 10px;
+  }
+
+  .lumikBigImage {
+    position: absolute;
+    right: clamp(0px, 1vw, 16px);
+    left: auto;
+    top: auto;
+    bottom: 0;
+    transform: none;
+    width: clamp(560px, 47vw, 640px);
+    height: auto;
+    z-index: 2;
+  }
+
+  .stairs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    height: auto;
+    transform: none;
+    z-index: 1;
+  }
+}
+
+/* iPad Mini 1024×768 (landscape) — как на 1920×1080 */
+@media (width: 1024px) and (height: 768px) {
+  .landingOne { height: calc(100vh - 64px); }
+
+  /* логотип-текст слева сверху */
+  .lumituneLogoText {
+    position: absolute;
+    left: 64px;
+    top: 28px;
+    width: 560px;
+    height: auto;
+    mix-blend-mode: normal;
+  }
+
+  /* контент слева, повыше, ширина поменьше */
+  .descriptionBlock {
+    position: absolute;
+    left: 96px;
+    top: 250px;
+    width: 520px;
+    height: auto;
+    align-items: flex-start;
+    text-align: left;
+    gap: 24px;
+    z-index: 3;              /* поверх Люміка */
+  }
+
+  .mainHeading {
+    font-size: 46px;
+    line-height: 1.2;
+    text-align: left;
+    width: 100%;
+  }
+
+  .subHeading {
+    font-size: 18px;
+    line-height: 1.45;
+    text-align: left;
+    width: 100%;
+  }
+
+  .buttonsSection {
+    width: 100%;
+    gap: 18px;
+    justify-content: flex-start;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 240px;
+    height: 58px;
+    border-radius: 10px;
+  }
+
+  .buttonPrimary a,
+  .buttonSecondary a {
+    font-size: 20px;
+    line-height: 24px;
+    width: auto;
+    padding: 0 10px;
+  }
+
+  .lumikBigImage {
+    position: absolute;
+    right: -55px;
+    left: auto;
+    bottom: 0;
+    top: auto;
+    transform: none;
+    width: 540px;            
+    height: auto;
+    z-index: 1;             
+    pointer-events: none;   
+  }
+
+  .stairs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    height: auto;
+    transform: none;
+    z-index: 0;
+  }
+}
+
+@media (width: 1180px) and (height: 820px) {
+  .landingOne {
+    height: calc(100vh - 64px);
+  }
+
+  .lumituneLogoText {
+    position: absolute;
+    left: 80px;
+    top: 40px;
+    width: 600px;
+    height: auto;
+    mix-blend-mode: normal;
+  }
+
+  .descriptionBlock {
+    position: absolute;
+    left: 120px;
+    top: 280px;
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 28px;
+    z-index: 3;
+  }
+
+  .mainHeading {
+    font-size: 48px;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .subHeading {
+    font-size: 18px;
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  .buttonsSection {
+    width: 100%;
+    gap: 18px;
+    justify-content: flex-start;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+  }
+
+  .buttonPrimary a,
+  .buttonSecondary a {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0 10px;
+    width: auto;
+  }
+
+
+  .lumikBigImage {
+    position: absolute;
+    right: -60px;
+    bottom: -50px;
+    width: 560px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .stairs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+}
+
+
+@media (width: 1366px) and (height: 1024px) {
+  .lumikBigImage {
+    position: absolute;
+    right: 120px; 
+    bottom: 65px;
+    width: 800px; 
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .lumituneLogoText {
+    width: 620px;
+    height: auto;
+  }
+
+  .descriptionBlock {
+    position: absolute;
+    left: 140px;
+    top: 280px;
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 28px;
+    z-index: 3;
+  }
+
+  .mainHeading {
+    font-size: 50px;
+  }
+
+  .subHeading {
+    font-size: 19px;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 260px;
+    height: 62px;
+  }
+
+  .stairs {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (width: 1368px) and (height: 912px) {
+  .lumikBigImage {
+    position: absolute;
+    right: 140px;
+    bottom: 180px; 
+    width: 740px; 
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .lumituneLogoText {
+    width: 600px;
+    height: auto;
+  }
+
+  .descriptionBlock {
+    position: absolute;
+    left: 130px;
+    top: 260px;
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 26px;
+    z-index: 3;
+  }
+
+  .mainHeading {
+    font-size: 48px;
+  }
+
+  .subHeading {
+    font-size: 18px;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 250px;
+    height: 60px;
+  }
+
+  .stairs {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: 2000px) and (min-height: 1300px) {
+  .landingContainer,
+  .mainSection {
+    height: 100vh;          /* всегда во всю высоту окна */
+    min-height: 100vh;
+    overflow: hidden;       /* убирает полосу */
+  }
+
+  .lumikBigImage {
+    bottom: 0;              /* прижимаем к нижней границе */
+    right: 160px;
+    width: 850px;
+    height: auto;
+  }
+
+  .stairs {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}

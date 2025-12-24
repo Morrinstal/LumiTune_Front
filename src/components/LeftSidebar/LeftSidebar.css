@@ -1,0 +1,230 @@
+.leftSidebar {
+  position: absolute;
+  left: 10px;
+  top: 72px;
+  width: 280px;
+  height: 1153px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 24px;
+  padding: 16px 10px 0 16px;
+
+  border-radius: 16px 0 0 16px;
+
+  box-sizing: border-box;
+  background: rgba(12, 12, 12, 0.4);
+  border: 1px solid rgba(166, 218, 255, 0.6);
+}
+
+.menuTitle,
+.playlistsTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+
+  position: absolute;
+  width: fit-content;
+  max-width: 260px;
+  height: 45px;
+  min-height: 40px;
+  left: 0px;
+    
+  box-sizing: border-box;
+  border-radius: 9999px;
+}
+
+.menuTitle {
+  top: 16px;
+}
+
+.playlistsTitle {
+  top: 269px;
+}
+
+.menuTitleText,
+.playlistsTitleText {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #F0F0F0;
+}
+
+.menuBlock,
+.playlistsBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+
+  position: absolute;
+  width: 260px;
+  height: 96px;
+  left: 0px;
+}
+
+.menuBlock {
+  top: 85px;
+}
+
+.playlistsBlock {
+  top: 338px;
+}
+
+.dividerBlock,
+.dividerBlockLower {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+
+  position: absolute;
+  width: 280px;
+  height: 40px;
+  min-height: 40px;
+  left: 0px;
+
+  border-radius: 9999px;
+}
+
+.dividerBlock {
+  top: 205px;
+}
+
+.dividerBlockLower {
+  top: 845px;
+}
+
+.dividerLine {
+  width: 100%;
+  height: 1px;
+  background: #426D83;
+  opacity: 0.9;
+}
+
+.artistsList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 0px 8px;
+  gap: 16px;
+
+  position: absolute;
+  width: 260px;
+  height: 370px;
+  left: 0px;
+  top: 466px;
+}
+
+.yPHeader {
+  padding: 0 8px 16px;
+  width: 260px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.yPHeaderRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  gap: 12px;                       
+}
+
+.ypTxt {
+  margin: 0;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #BFEDFD;
+}
+
+.listStreamlineIcon {
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+}
+
+
+
+.recentlyPlayed {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0px 0px 0px 8px;
+  gap: 16px;
+
+  position: absolute;
+  height: 202px;
+  left: 0px;
+  width: 260px; 
+  top: 894px;
+}
+  
+.rPHeader {
+  padding: 0 8px 16px;
+  width: 260px;
+  height: 40px;
+  box-sizing: border-box;
+}
+  
+.rPHeaderRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.rPTitle {
+  margin: 0;
+  width: 165px;
+  height: 17px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #BFEDFD;
+}
+
+.rPRefresh {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+}
+
+.rPBody {
+  flex: 1 0 auto;               
+  display: flex;
+  align-items: center;          
+  justify-content: center;
+}
+
+.clockIcon {
+  width: 102px;
+  height: 102px;
+}

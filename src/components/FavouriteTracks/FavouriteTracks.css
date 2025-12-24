@@ -1,0 +1,206 @@
+.favouriteTracks {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px; 
+    position: absolute;
+    width: 1608px;
+    height: 2249px;
+    left: 302px;
+    top: 72px;
+    
+    background: rgba(12, 12, 12, 0.2);
+
+    border: 1px solid rgba(166, 218, 255, 0.6);
+    border-radius: 16px;
+}
+
+.favouriteTracksHeader {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 236px;
+
+    padding: 32px 28px 24px 32px;
+    border-radius: 16px 16px 0 0;
+
+    background-image: url('../../assets/headerCoverHearts.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.favouriteTracksTitle {
+    width: 750px;
+    height: 77px;
+    
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.favouriteTracksBody {
+    width: 1607px;
+    height: 1902px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;              
+    padding: 28px 36px 32px; 
+    background: rgba(1, 11, 15, 0.2);
+    border-radius: 20px;
+}
+
+.favouriteTracksBodyInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 1524px;
+    height: 1717px;
+    left: 54px;
+}
+
+.playAndDownloadBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+
+    margin: 0;
+    width: 202px;
+    height: 60px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.circleBtnPlayStop {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    gap: 4px;
+
+    width: 60px;
+    height: 60px;
+
+    background: url(white-noise-1400x825-1-960x540), rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay, normal;
+    border: 3px solid #93D3E7;
+    border-radius: 1000px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.circleBtnMix {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 2px 1px;
+    gap: 10px;
+
+    width: 47px;
+    height: 47px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.circleBtnDownload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 2px 1px;
+    gap: 10px;
+
+    width: 47px;
+    height: 47px;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.circleBtnMix,
+.circleBtnDownload,
+.circleBtnPlayStop {
+  background: transparent;      
+  border: none;                 
+  outline: none;                
+  cursor: pointer;
+}
+
+.favTracksListHeader{
+  display:flex;
+  align-items:center;
+  margin-left:auto;        
+  padding-right:36px;      
+  column-gap:48px;         
+  width:auto;
+}
+
+.col-album { width:420px; }
+.col-date  { width:260px; white-space:nowrap; }
+.col-time  { width:80px;  text-align:right; }
+
+.listHeaderTxt{
+  font: 400 20px/27px 'Open Sans', sans-serif;
+  color:#F0F0F0;
+}
+
+.favTracksList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+
+    width: 1524px;
+    height: 1662px;
+    left: 0px;
+    margin-top: 20px;
+}
+
+.fav-empty {
+    width: 750px;
+    height: 77px;
+    
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 77px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}

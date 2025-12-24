@@ -1,0 +1,69 @@
+/* MainPage.css */
+:root{
+  --header-h: 64px;
+  --sidebar-w: 280px;
+  --sidebar-w-md: 240px;
+  --player-h: 72px;  /* запас под фиксированный плеер снизу */
+}
+
+/* корневой контейнер */
+.page--main{
+  min-height: 100dvh;
+  padding-top: var(--header-h);
+  padding-left: calc(var(--sidebar-w) + 16px);
+  padding-right: 16px;
+  padding-bottom: calc(var(--player-h) + 16px);
+  box-sizing: border-box;
+  overflow-x: hidden;           /* убираем нижний скролл */
+}
+
+/* чипы-фильтры: на десктопе «прилипают» под шапкой слева от центра */
+.chipGroup{
+  position: sticky;
+  top: calc(var(--header-h) + 16px);
+  z-index: 10;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 0 0 16px;
+}
+
+/* -------- брейкпоинты -------- */
+
+/* ≤ 1440: сайдбар уже, отступы меньше */
+@media (max-width: 1440px){
+  .page--main{
+    padding-left: calc(var(--sidebar-w-md) + 14px);
+  }
+}
+
+/* ≤ 1024: сайдбар фиксированный/узкий, чипы не липкие */
+@media (max-width: 1024px){
+  .page--main{
+    padding-left: 96px;           /* узкая боковая колонка/иконки или просто запас */
+  }
+  .chipGroup{
+    position: static;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 12px 0 8px;
+  }
+}
+
+/* ≤ 768: прячем левый сайдбар целиком, контент на всю ширину */
+@media (max-width: 768px){
+  .page--main{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .chipGroup{
+    justify-content: center;
+  }
+}
+
+/* ≤ 480: компактные отступы */
+@media (max-width: 480px){
+  .page--main{
+    padding-bottom: calc(var(--player-h) + 8px);
+  }
+}

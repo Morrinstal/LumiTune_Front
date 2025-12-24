@@ -1,0 +1,28 @@
+.tracksDiscover {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1175px;
+    height: 1360px;
+    left: 302px;
+    top: 72px;
+
+    background: rgba(12, 12, 12, 0.2);
+
+    border: 1px solid rgba(166, 218, 255, 0.6);
+    border-radius: 20px;
+}
+
+.tracksContentBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    gap: 86px; 
+    position: absolute;
+    width: 1066px;
+    height: 1200px;
+    left: 60px;
+    top: 140px;
+}

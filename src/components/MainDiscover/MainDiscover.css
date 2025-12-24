@@ -1,0 +1,320 @@
+.mainDiscover {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1175px;
+    height: 2800px;
+    left: 302px;
+    top: 72px;
+
+    background: rgba(12, 12, 12, 0.2);
+
+    border: 1px solid rgba(166, 218, 255, 0.6);
+    border-radius: 20px;
+}
+
+.mainContentBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    gap: 86px; 
+    position: absolute;
+    width: 1066px;
+    height: 2620px;
+    left: 60px;
+    top: 140px;
+}
+
+.topMusicToday {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    gap: 20px;
+    width: 1062px;
+    height: 297px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.topMusic__title {
+    width: 450px;
+    height: 39px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #BEF4FF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.songCardsGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    padding: 0px 4px;
+    gap: 24px;
+
+    width: 1062px;
+    height: 214px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.newMusicReleases {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 1062px;
+    height: 306px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+    gap: 20px;
+}
+/* прозрачные стрелки */
+.arrowBtn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.arrowBtn:disabled {
+  opacity: .65;
+  cursor: default;
+}
+.directionButtonsBlock img {
+  width: 24px;
+  height: 24px;
+}
+
+.newMusic__title_block,
+.topMusic__title_block,
+.favArtists__title_block,
+.newPodcast__title_block,
+.newAudioBooks__title_block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+
+    gap: 10px;
+
+    width: 1062px;
+    height: 50px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.newMusic__title {
+    width: 315px;
+    height: 39px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #BEF4FF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.songCardsGrid2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    padding: 0px 4px;
+    gap: 24px;
+
+    width: 1062px;
+    height: 214px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.bubbleCardsGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 35px;
+
+    width: 1052px;
+    height: 287px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.favArtists {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 1052px;
+    height: 350px;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.favArtists__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 926px;
+    height: 39px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #BEF4FF;
+}
+
+.newPodcastReleases {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    width: 1066px;
+    height: 503px;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.newPodcast__title {
+    height: 39px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #BEF4FF;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.podcastGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 23px;
+
+    width: 1066px;
+    height: 450px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.newAudioBookReleases {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    width: 959px;
+    height: 743px;
+
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+.newAudioBooks__title {
+    height: 39px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #BEF4FF;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.newAB_Grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 21px;
+
+    width: 959px;
+    height: 690px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}

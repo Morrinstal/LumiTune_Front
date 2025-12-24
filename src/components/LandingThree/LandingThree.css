@@ -1,0 +1,510 @@
+/* ===== LandingThree — адаптив без правок TSX ===== */
+
+.landingThree{
+  position: relative;        /* важно: относительный контекст для абсолютов */
+  width: 100%;
+  aspect-ratio: 1920 / 1160; /* держим пропорцию макета */
+  background: linear-gradient(180deg, #0B0F1C 0%, #1B2040 100%);
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* фоновые градиенты */
+.gradient{
+  position: absolute;
+  inset: 0;                  /* = top:0; right:0; bottom:0; left:0 */
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* если .gradient содержит <img>, растягиваем картинку корректно */
+.gradient img{
+  object-fit: cover;         /* заполняет всю область без «пустых» краёв */
+  object-position: center;   /* по центру, как на макете */
+}
+
+/* большая «синяя» фигура справа (была 2262×3500, left 1109 / top 303) */
+.mainblue{
+  position: absolute;
+  right: -3%;
+  bottom: -1.2%;          /* было -6% → подняли */
+  width: 41.8%;
+  height: auto;          /* масштабируем по ширине */
+  max-height: 74%;          /* было max-height: 73.9% */
+  object-fit: contain;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ноты сверху справа/слева */
+.note1_001_3{               /* была left: 1000, top: 95, 108×180 */
+  position: absolute;
+  left: 52.1%;
+  top: 8.2%;
+  width: 5.65%;
+  height: auto;
+  transform: rotate(28.02deg);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.note3_3{                    /* была left: 1723, top: 141, 146×146 */
+  position: absolute;
+  left: 89.7%;
+  top: 12.2%;
+  width: 7.62%;
+  height: auto;
+  transform: rotate(-3.53deg);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ноты снизу */
+.note1_001_1{                /* была left: 275, top: 952, 80×133 */
+  position: absolute;
+  left: 14.3%;
+  top: 82.1%;
+  width: 4.17%;
+  height: auto;
+  transform: rotate(-45.85deg);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.note2_002_2{                /* была left: 772, top: 890, 146×146 */
+  position: absolute;
+  left: 40.2%;
+  top: 76.7%;
+  width: 7.59%;
+  height: auto;
+  transform: rotate(-0.75deg);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ——— Левый текстовый блок ——— */
+
+.band_info{
+  position: absolute;
+  left: 9.3%;               /* 178 / 1920 */
+  top: 16.8%;               /* 195 / 1160 */
+  width: 42.7%;             /* 819.15 / 1920 */
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4.1vw, 78px);
+  z-index: 4;
+}
+
+.band_info_text{
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: clamp(24px, 3.33vw, 64px);
+  line-height: 1.2;
+  color: #BCE3FF;
+}
+
+/* ——— блок «Завантажити» ——— */
+
+.band_download{
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(16px, 2.35vw, 45px);
+}
+
+.download{
+  width: clamp(64px, 7.6vw, 146px);
+  height: auto;
+  flex: 0 0 auto;
+}
+
+.band_download_band_1{
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 9.8vw, 188px);   /* декоративный «воздух» как в макете */
+}
+
+.band_download_band_2{
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.9vw, 36px);
+}
+
+.band_download_text{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 2.5vw, 48px);
+  line-height: 1.2;
+  color: #94AAFF;
+}
+
+/* ——— блок «Плейлисти» ——— */
+
+.band_playlist{
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 3.2vw, 61px);
+}
+
+.band_playlist_band_1{
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 9.8vw, 188px);
+}
+
+.band_playlist_band_2{
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.9vw, 36px);
+}
+
+.band_playlist_text{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 2.5vw, 48px);
+  line-height: 1.2;
+  color: #94FFFF;
+}
+
+.pencil{
+  width: clamp(88px, 10.2vw, 196px);
+  height: auto;
+  flex: 0 0 auto;
+}
+
+/* ===== Точечные подстройки ===== */
+
+/* 2K (2560×1440) и шире — делаем чуть крупнее набор */
+@media (min-width: 2304px) and (min-aspect-ratio: 16/9){
+  .band_info_text{ font-size: clamp(28px, 2.9vw, 72px); }
+  .band_download_text,
+  .band_playlist_text{ font-size: clamp(22px, 2.1vw, 54px); }
+  .mainblue{ right: -3%; bottom: -5%; width: 41.5%; }
+}
+
+/* Ноутбуки 1440–1366 — немного прижмём вправо картинку,
+   а ноты слегка уменьшим, чтобы не заслоняли контент */
+@media (max-width: 1440px){
+  .mainblue{ right: -6%; bottom: -6%; width: 43%; }
+  .note1_001_3, .note3_3, .note1_001_1, .note2_002_2{ width: 85%; }
+}
+
+/* Планшеты — увеличим ширину текста и упростим сетку */
+@media (max-width: 992px){
+  .band_info{ width: 60%; left: 8%; top: 14%; }
+  .mainblue{ opacity: .9; right: -10%; }
+  .note1_001_3, .note3_3{ opacity: .7; }
+}
+
+/* Мобилки — в одну колонку, иконки/ноты меньше, упор на читаемость */
+@media (max-width: 768px){
+  .band_info{
+    width: 82%;
+    left: 9%;
+    top: 12%;
+    gap: 24px;
+  }
+  .band_info_text{
+    font-size: clamp(22px, 6vw, 34px);
+  }
+  .band_download,
+  .band_playlist{
+    gap: 18px;
+  }
+  .download{ width: clamp(52px, 12vw, 92px); }
+  .pencil{ width: clamp(80px, 18vw, 130px); }
+  .band_download_text,
+  .band_playlist_text{
+    font-size: clamp(16px, 4.6vw, 22px);
+  }
+  .mainblue{
+    right: -18%;
+    bottom: -10%;
+    width: 60%;
+    opacity: .7;
+  }
+  .note1_001_3, .note3_3, .note1_001_1, .note2_002_2{
+    width: 6%;
+    opacity: .5;
+  }
+}
+
+@media (min-width: 1680px) and (min-aspect-ratio: 16/9){
+  .mainblue{ bottom: -0.6%; }
+}
+@media (min-width: 1920px) and (max-width: 2299px) and (min-aspect-ratio: 16/9){
+  .mainblue{ bottom: -1%; }   /* FullHD */
+}
+@media (min-width: 2304px) and (min-aspect-ratio: 16/9){
+  .mainblue{ bottom: -0.2%; } /* 2K+ чуть ещё вверх */
+}
+
+/* на более «высоких» экранах (не 16:9) можно чуть опустить,
+   чтобы низ не обрезался */
+@media (max-aspect-ratio: 16/9){
+  .mainblue{ bottom: -2.8%; }
+}
+
+/* ноутбуки 1366–1440 — оставим запас снизу */
+@media (max-width: 1440px){
+  .mainblue{ bottom: -3.8%; right: -4%; }
+}
+
+/* .landingThree {
+  position: absolute;
+  width: 1920px;
+  height: 1160px;
+  left: 0;
+  top: 2320px;
+  background: linear-gradient(180deg, #0B0F1C 0%, #1B2040 100%);
+  z-index: 0;
+}
+
+.gradient {
+  position: absolute;
+  width: 1920px;
+  height: 1160px;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}    
+
+.mainblue {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 2262px;
+  height: 3500px;
+  left: 1109px;
+  top: 303px;
+
+  border: 0.5px #93E8FF;
+  object-fit: fill;
+  max-width: 42.3%;
+  max-height: 73.9%;
+  z-index: 3;
+}
+
+.note1_001_3 {
+  position: absolute;
+  width: 108.44px;
+  height: 180.17px;
+  left: 1000px;
+  top: 95px;
+
+  transform: rotate(28.02deg);
+}
+
+.note3_3 {
+  position: absolute;
+  width: 146.23px;
+  height: 146.23px;
+  left: 1723px;
+  top: 141px;
+
+  transform: rotate(-3.53deg);
+}
+
+.band_info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 78px;
+
+  position: absolute;
+  width: 819.15px;
+  height: 611.01px;
+  left: 178px;
+  top: 195px;
+}
+
+.band_info_text {
+  width: 819.15px;
+  height: 154px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 77px;
+  display: flex;
+  align-items: center;
+
+  color: #BCE3FF;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.band_download {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 45px;
+
+  width: 694px;
+  height: 146px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.download {
+  width: 146px;
+  height: 146px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.band_download_band_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 188px;
+
+  width: 503px;
+  height: 116px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.band_download_band_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 36px;
+
+  width: 503px;
+  height: 116px;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.band_download_text {
+  width: 757px;
+  height: 116px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  display: flex;
+  align-items: flex-start;
+
+  color: #94AAFF;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.band_playlist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 61px;
+
+  width: 819.15px;
+  height: 155.01px;
+
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.band_playlist_band_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 188px;
+
+  width: 562px;
+  height: 116px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;  
+}
+
+.band_playlist_band_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 36px;
+
+  width: 562px;
+  height: 116px;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;  
+}
+
+.band_playlist_text {
+  width: 562px;
+  height: 116px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  display: flex;
+  align-items: center;
+
+  color: #94FFFF;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;  
+}
+
+.pencil {
+  width: 196.15px;
+  height: 155.01px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.note1_001_1 {
+  position: absolute;
+  width: 80px;
+  height: 133px;
+  left: 275px;
+  top: 952px;
+
+  transform: rotate(-45.85deg);
+}
+
+.note2_002_2 {
+  position: absolute;
+  width: 145.69px;
+  height: 145.69px;
+  left: 772px;
+  top: 890px;
+  
+  transform: rotate(-0.75deg);
+} */

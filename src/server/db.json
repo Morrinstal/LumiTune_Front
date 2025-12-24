@@ -1,0 +1,399 @@
+{
+  "users": [
+    {
+      "id": "a126",
+      "email": "dima@gmail.com",
+      "password": "Dima123",
+      "is_admin": false,
+      "is_client": true,
+      "is_staff": false,
+      "is_active": true,
+      "full_name": "Client User"
+    }
+  ],
+  "artistlinks": [
+    {
+      "id": "1",
+      "name": "Susumu Hirasawa",
+      "description": "Mixing elements of progressive rock, spacy new age atmospheres, and electro-pop, Susumu Hirasawa is known for his time in bands including the chart-topping new wave group P-Model, as a soundtrack composer, and as a charting solo artist. After hitting number one in Japan with P-Model's second album, Landsale, in 1980, he made his solo debut with 1989's Water in Time and Space.",
+      "photo": "/artists/Susumu.jpg",
+      "listeners": "317 223"
+    },
+    {
+      "id": "2",
+      "name": "Marcin Przybyłowicz",
+      "description": "A visionary - one of the most streamed Polish composers worldwide, Marcin Przybyłowicz has already made history in the gaming industry. With the release of “The Witcher 3: Wild Hunt” in 2015, then followed by two expansions — “Heart of Stone” and “Blood and Wine” — he instantly became a household name, gaining an immediate success he then repeated with the release of the score for Cyberpunk 2077",
+      "photo": "/artists/Marcin.jpg",
+      "listeners": "1,501,267"
+    },
+    {
+      "id": "3",
+      "name": "ATLUS Sound Team",
+      "description": "The ATLUS Sound Team is a music production team made up of composers belonging to the Japan",
+      "photo": "/artists/Atlus.jpg",
+      "listeners": "2,904,184"
+    },
+    {
+      "id": "4",
+      "name": "Lorien Testard",
+      "description": "Clair Obscur: Expedition 33 - Music Composer",
+      "photo": "/artists/Lorien.jpg",
+      "listeners": "1,100,620"
+    },
+    {
+      "id": "5",
+      "name": "Jeff Bezos",
+      "description": "Amazon Master",
+      "photo": "/artists/Jeff.jpg",
+      "listeners": "5,203,193"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "1",
+      "name": "EARTH",
+      "artistid": "1",
+      "genreid": "pop",
+      "albumid": "1",
+      "playsnum": "4690563",
+      "adult": false,
+      "time": 253.8,
+      "audio": "/music/EARTH.mp3",
+      "cover": "/covers/Earth.jpg",
+      "created_at": "2025-01-10T12:00:00Z"
+    },
+    {
+      "id": "2",
+      "name": "Gats",
+      "artistid": "1",
+      "genreid": "dance",
+      "albumid": "1",
+      "playsnum": "152034",
+      "adult": false,
+      "time": 201,
+      "audio": "/music/Gats.mp3",
+      "cover": "/covers/Gats.jpg",
+      "created_at": "2025-01-12T09:30:00Z"
+    },
+    {
+      "id": "3",
+      "name": "Forces",
+      "artistid": "1",
+      "genreid": "dance",
+      "albumid": "1",
+      "playsnum": "152034",
+      "adult": false,
+      "time": 241.8,
+      "audio": "/music/Forces.mp3",
+      "cover": "/covers/Forces.png",
+      "created_at": "2025-01-12T09:30:00Z"
+    },
+    {
+      "id": "4",
+      "name": "Ball",
+      "artistid": "1",
+      "genreid": "dance",
+      "albumid": "1",
+      "playsnum": "152034",
+      "adult": false,
+      "time": 64.8,
+      "audio": "/music/Ball.mp3",
+      "cover": "/covers/Ball.jpg",
+      "created_at": "2025-01-12T09:30:00Z"
+    },
+    {
+      "id": "5",
+      "name": "BEHELIT",
+      "artistid": "1",
+      "genreid": "dance",
+      "albumid": "1",
+      "playsnum": "152034",
+      "adult": false,
+      "time": 93,
+      "audio": "/music/BEHELIT.mp3",
+      "cover": "/covers/Behelit.jpg",
+      "created_at": "2025-01-12T09:30:00Z"
+    },
+    {
+      "id": "6",
+      "name": "Murder",
+      "artistid": "1",
+      "genreid": "dance",
+      "albumid": "1",
+      "playsnum": "152034",
+      "adult": false,
+      "time": 557.4,
+      "audio": "/music/Murder.mp3",
+      "cover": "/covers/Murder.jpg",
+      "created_at": "2025-01-12T09:30:00Z"
+    },
+    {
+      "id": "7",
+      "name": "Kaer Morchen",
+      "artistid": "2",
+      "genreid": "dance",
+      "albumid": "2",
+      "playsnum": "152034",
+      "adult": false,
+      "time": 141,
+      "audio": "/music/Kaer.mp3",
+      "cover": "/covers/Kaer.jpg",
+      "created_at": "2025-01-12T09:30:00Z"
+    },
+    {
+      "id": "8",
+      "name": "You're... Immortal",
+      "artistid": "2",
+      "genreid": "dance",
+      "albumid": "2",
+      "playsnum": "152034",
+      "adult": false,
+      "time": 152.4,
+      "audio": "/music/You're...Immortal.mp3",
+      "cover": "/covers/Immortal.jpg",
+      "created_at": "2025-01-12T09:30:00Z"
+    },
+    {
+      "id": "9",
+      "name": "Ark",
+      "artistid": "3",
+      "genreid": "dance",
+      "albumid": "3",
+      "playsnum": "152034",
+      "adult": false,
+      "time": 190.8,
+      "audio": "/music/Ark.mp3",
+      "cover": "/covers/Akechi.jpg",
+      "created_at": "2025-01-12T09:30:00Z"
+    },
+    {
+      "id": "10",
+      "name": "Gentle Madman",
+      "artistid": "3",
+      "genreid": "dance",
+      "albumid": "3",
+      "playsnum": "152034",
+      "adult": false,
+      "time": 182.4,
+      "audio": "/music/Gentle Madman.mp3",
+      "cover": "/covers/Maruki.jpg",
+      "created_at": "2025-01-12T09:30:00Z"
+    },
+    {
+      "id": "11",
+      "name": "Kichijoji 199X",
+      "artistid": "3",
+      "genreid": "dance",
+      "albumid": "3",
+      "playsnum": "152034",
+      "adult": false,
+      "time": 182.4,
+      "audio": "/music/Kichijoji 199X.mp3",
+      "cover": "/covers/Morgana.jpg",
+      "created_at": "2025-01-12T09:30:00Z"
+    },
+    {
+      "id": "12",
+      "name": "For Those Who Come After",
+      "artistid": "4",
+      "genreid": "dance",
+      "albumid": "4",
+      "playsnum": "132034",
+      "adult": false,
+      "time": 145.8,
+      "audio": "/music/For Those Who Come After.mp3",
+      "cover": "/covers/Gustave.jpg",
+      "created_at": "2025-01-12T09:30:00Z"
+    },
+    {
+      "id": "13",
+      "name": "Our Drafts Unite",
+      "artistid": "4",
+      "genreid": "dance",
+      "albumid": "4",
+      "playsnum": "132034",
+      "adult": false,
+      "time": 79.8,
+      "audio": "/music/Our Drafts Unite.mp3",
+      "cover": "/covers/Maelle.jpg",
+      "created_at": "2025-01-12T09:30:00Z"
+    },
+    {
+      "id": "14",
+      "name": "Nocturne pour Lumière",
+      "artistid": "4",
+      "genreid": "dance",
+      "albumid": "4",
+      "playsnum": "132034",
+      "adult": false,
+      "time": 181.8,
+      "audio": "/music/Nocturne pour Lumière.mp3",
+      "cover": "/covers/sophie-and-gustave.jpg",
+      "created_at": "2025-01-12T09:30:00Z"
+    }
+  ],
+  "playlists": [
+    {
+      "id": "1",
+      "title": "Berserk OST",
+      "description": "Berserk OST",
+      "cover": "/covers/Berserk.jpg",
+      "owner_id": "1",
+      "created_at": "2025-02-01T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "title": "Witcher 3: Wild Hunt OST",
+      "description": "Witcher 3: Wild Hunt",
+      "cover": "/covers/Witcher3.jpg",
+      "owner_id": "2",
+      "created_at": "2025-02-01T10:00:00Z"
+    },
+    {
+      "id": "3",
+      "title": "Persona 5 Royal OST",
+      "description": "Persona 5 Royal OST",
+      "cover": "/covers/P5.jpg",
+      "owner_id": "3",
+      "created_at": "2025-02-01T10:00:00Z"
+    },
+    {
+      "id": "4",
+      "title": "Nos vies en Lumière",
+      "description": "Clair Obscur: Expedition 33 - Bonus Soundtrack",
+      "cover": "/covers/ClairBonus.jpg",
+      "owner_id": "4",
+      "created_at": "2025-02-01T10:00:00Z"
+    },
+    {
+      "id": "cba5",
+      "title": "Любимые треки",
+      "description": "Автоплейлист: Любимые треки",
+      "cover": "/covers/heart.jpg",
+      "owner_id": "a126",
+      "created_at": "2025-10-24T13:27:28.338Z"
+    },
+    {
+      "id": "9b7e",
+      "title": "Любимые аудиокниги",
+      "description": "Автоплейлист: Любимые аудиокниги",
+      "cover": "/covers/heart.jpg",
+      "owner_id": "a126",
+      "created_at": "2025-10-24T13:27:28.339Z"
+    },
+    {
+      "id": "b305",
+      "title": "Любимые подкасты",
+      "description": "Автоплейлист: Любимые подкасты",
+      "cover": "/covers/heart.jpg",
+      "owner_id": "a126",
+      "created_at": "2025-10-24T13:27:28.340Z"
+    }
+  ],
+  "playlistitems": [
+    {
+      "id": "1",
+      "playlist_id": "1",
+      "track": "1",
+      "position": "1"
+    },
+    {
+      "id": "2",
+      "playlist_id": "1",
+      "track": "2",
+      "position": "2"
+    },
+    {
+      "id": "bb12",
+      "playlist_id": "d575",
+      "track": "1",
+      "position": "1"
+    },
+    {
+      "id": "6bd6",
+      "playlist_id": "cba5",
+      "track": "1",
+      "position": "1"
+    },
+    {
+      "id": "307c",
+      "playlist_id": "b305",
+      "track": "1",
+      "position": "1"
+    },
+    {
+      "id": "a004",
+      "playlist_id": "cba5",
+      "track": "3",
+      "position": "2"
+    }
+  ],
+  "audiobooks": [
+    {
+      "id": "1",
+      "title": "Bebesoon",
+      "author": "Jeff Basic",
+      "author_fk_id": "5",
+      "genreid": "fiction",
+      "playsnum": 1200,
+      "adult": false,
+      "duration_seconds": 7878.6,
+      "info": "A thrilling story of Amazon",
+      "chapter": 12,
+      "audio_file": "/audio/audiobooks/jeff-bezos-amazon-and-blue-origin-lex-fridman-podcast.mp3",
+      "cover_image": "/covers/PodcastJeff.jpg",
+      "created_at": "2025-01-20T14:00:00Z",
+      "update_at": "2025-01-21T09:00:00Z"
+    }
+  ],
+  "podcastepisodes": [
+    {
+      "id": "1",
+      "title": "Blue Origin",
+      "episode": 1,
+      "host": "Jeffs",
+      "host_fk_id": "5",
+      "genreid": "tech",
+      "playsnum": 5400,
+      "adult": false,
+      "duration_seconds": 7878.6,
+      "info": "Jeff Bezos Amazon and Blue Origin Lex Fridman Podcast #405",
+      "audio_file": "/audio/podcasts/jeff-bezos-amazon-and-blue-origin-lex-fridman-podcast.mp3",
+      "cover_image": "/covers/PodcastJeff.jpg",
+      "created_at": "2025-02-05T18:00:00Z",
+      "update_at": "2025-02-05T18:30:00Z"
+    },
+    {
+      "id": "2",
+      "title": "Orange",
+      "episode": 1,
+      "host": "Jeffsww",
+      "host_fk_id": "5",
+      "genreid": "tech",
+      "playsnum": 5400,
+      "adult": false,
+      "duration_seconds": 7878.6,
+      "info": "Jeff Bezos Amazon and Blue Origin Lex Fridman Podcast #405",
+      "audio_file": "/music/Forces.mp3",
+      "cover_image": "/covers/PodcastJeff.jpg",
+      "created_at": "2025-02-05T18:00:00Z",
+      "update_at": "2025-02-05T18:30:00Z"
+    },
+    {
+      "id": "3",
+      "title": "Haaai",
+      "episode": 1,
+      "host": "Nikolaio",
+      "host_fk_id": "5",
+      "genreid": "tech",
+      "playsnum": 5400,
+      "adult": false,
+      "duration_seconds": 7878.6,
+      "info": "Jeff Bezos Amazon and Blue Origin Lex Fridman Podcast #405",
+      "audio_file": "/music/Kaer.mp3",
+      "cover_image": "/covers/PodcastJeff.jpg",
+      "created_at": "2025-02-05T18:00:00Z",
+      "update_at": "2025-02-05T18:30:00Z"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+.mediaSideMenuV2 {
+  box-sizing: border-box;
+  position: absolute;
+
+  width: 400px;
+  height: 1195px;
+  left: 1490px;
+  top: 72px;
+
+  background: rgba(12, 12, 12, 0.4);
+  border: 1px solid rgba(166, 218, 255, 0.6);
+  border-radius: 2px 20px 20px 2px;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

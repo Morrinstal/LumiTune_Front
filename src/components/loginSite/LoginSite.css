@@ -1,0 +1,293 @@
+/* ====== БАЗА / СЦЕНА ====== */
+html, body { height: 100%; margin: 0; }
+#root, .loginSite { min-height: 100%; }
+
+.loginSite{
+  position: relative;
+  min-height: 100vh;
+  background: #000;             /* базовый чёрный */
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+/* многослойный градиент под весь вьюпорт */
+.loginSite::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    /* мягкая виньетка (края затемняем) */
+    radial-gradient(120% 90% at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,.45) 100%),
+    /* нижний глубокий сине-зеленый отблеск */
+    radial-gradient(80% 65% at 50% 120%, rgba(0,60,120,.40) 0%, rgba(0,0,0,0) 60%),
+    /* правый верхний зелёный */
+    radial-gradient(55% 50% at 85% -5%, rgba(0,180,120,.35) 0%, rgba(0,0,0,0) 60%),
+    /* левый верхний голубой */
+    radial-gradient(55% 50% at 15% 0%, rgba(0,174,255,.35) 0%, rgba(0,0,0,0) 60%),
+    /* базовый тёмный фон */
+    radial-gradient(100% 100% at 50% 50%, #0a141d 0%, #03090f 55%, #000 100%);
+  /* лёгкий «шум» для живости (опционально) */
+  /* mask-image: radial-gradient(90% 70% at 50% 50%, #000 60%, transparent 100%); */
+}
+
+/* карточка поверх фона */
+.loginSite__card{
+  position: relative;
+  z-index: 1;
+  width: min(600px, 92vw);
+  padding: 32px 24px 20px;
+}
+.loginSite__card::before{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(12,12,12,0.7);
+  border: 0.5px solid rgba(166,218,255,0.8);
+  border-radius: 10px;
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(255,255,255,0.03) inset;
+  z-index:-1;
+}
+/* ====== ФОН КАК НА РЕГИСТРАЦИИ ====== */
+/* Оба слоя — фиксированные во вьюпорте */
+.grad,
+.gradient{
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.08);   /* чуть больше вьюпорта */
+  filter: blur(2px);        /* сгладить шов холста */
+  z-index: 0;
+  pointer-events: none
+}
+
+/* Если твой второй слой — именно картинка-оверлей, оставь так.
+   Если это ПУСТОЙ <img>, можно вместо него сделать тинт через opacity: */
+.gradient { opacity: .85; }           /* при необходимости подправь интенсивность */
+
+/* Иногда SVG с viewBox «рвётся» — этот фикс помогает */
+.grad svg, .gradient svg { width: 100%; height: 100%; }
+
+/* ====== КАРТОЧКА ====== */
+.window_entrance{
+  position: relative;
+  width: min(600px, 92vw);
+  z-index: 1;                         /* поверх фона */
+}
+
+/* Проблемную svg-подложку под карточкой выключаем,
+   а стекло и рамку рисуем псевдоэлементом: */
+.window_grad{ display: none !important; }
+
+.window_entrance::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(12,12,12,0.7);
+  border: 0.5px solid rgba(166,218,255,0.8);
+  border-radius: 10px;
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(255,255,255,0.03) inset;
+}
+
+/* Контент карточки */
+.band_window_entrance{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 32px 24px 20px;
+}
+
+/* ====== ШАПКА ====== */
+.band_main{
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+}
+.band_lumitune{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+.logo{ width: 132.8px; height: 105.52px; }
+.lumitune{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #F0F0F0;
+  text-align: center;
+}
+
+/* ====== ФОРМА ====== */
+.entrance{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.band_login_pass{
+  width: 100%;
+  max-width: 408px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.login_pass{ display: flex; flex-direction: column; gap: 16px; }
+
+.band_login{ display: flex; flex-direction: column; gap: 8px; }
+.band_login_text{ display: flex; flex-direction: column; gap: 8px; }
+.login_text{
+  font-size: 20px;
+  line-height: 27px;
+  color: #F0F0F0;
+}
+
+/* Поля */
+.input_login,
+.input_pass{
+  width: 100%;
+  height: 42px;
+  box-sizing: border-box;
+  padding: 11px 44px 11px 20px;       /* справа место под глаз */
+  background: #001527;
+  border: 1px solid rgba(147,183,255,0.5);
+  border-radius: 10px;
+  color: #A0B4D6;
+  outline: none;
+}
+.input_login::placeholder{ color:#56688D; }
+.input_pass::placeholder { color:#A0B4D6; }
+
+/* Пароль: заголовок + «Забыли пароль?» */
+.band_pass{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.band_pass_text{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 10px;
+  height: 35px;
+}
+.frame_pass{ display:flex; align-items:center; gap:10px; }
+.pass_text{ font-size:20px; line-height:27px; color:#F0F0F0; }
+.band_forgot_your_password{ display: flex; align-items: center; }
+.forgot_your_password_text{
+  font-size: 14px;
+  line-height: 19px;
+  color: #93B7FF;
+  text-decoration: underline;
+}
+
+/* Обёртка для глазика + позиционирование глазика */
+.passFieldWrap{
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 408px;
+}
+.passFieldWrap .passOpenedEye{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1;
+  filter: brightness(0) saturate(100%) invert(77%) sepia(24%)
+          saturate(624%) hue-rotate(176deg) brightness(101%) contrast(97%);
+}
+
+/* Кнопка входа */
+.btn_enter{
+  width: 100%;
+  max-width: 408px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: #00A6FF;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.btn_enter:disabled{
+  background: #666;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.enter_text{
+  font-size: 24px;
+  line-height: 30px;
+  color: #000311;
+}
+
+/* Ошибка под email */
+.error-message{
+  color: #FF4D4D;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+/* ====== ДИВАЙДЕР / ФУТЕР ====== */
+.line2{
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  align-self: center;
+}
+.band_down{
+  width: 100%;
+  max-width: 356px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text_no_account{
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(147,183,255,0.7);
+}
+.registration_in_lumitune{
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 10px 0;
+  border-bottom: 0.5px solid #93B7FF;
+  text-decoration: none;
+}
+.text_registration_in_lumitune{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #93B7FF;
+}
+.band{ flex: 0 0 auto; height: 0; }
+.down{ display:none; }
+
+/* ====== АДАПТИВ ====== */
+@media (max-width: 768px){
+  .lumitune{ font-size: 24px; line-height: 30px; }
+  .band_main{ gap: 28px; }
+  .band_down{ max-width: 100%; justify-content: center; gap: 16px; }
+}

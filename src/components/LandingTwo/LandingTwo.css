@@ -1,0 +1,528 @@
+/* ===== LandingTwo — адаптив без изменения TSX ===== */
+
+.landingTwo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 1160;                /* вместо фиксированных 1920x1160 */
+  background: linear-gradient(180deg, #0B0F1C 0%, #1B2040 100%);
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Градиенты-оверлеи */
+.gradient1,
+.gradient2 {
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* .gradient2 перекроет .gradient1 за счёт порядка в DOM */
+  pointer-events: none;
+}
+.gradient2 { z-index: 2; }
+
+.gradient1 img,
+.gradient2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Музыкальные «ступеньки» */
+.music {
+  position: absolute;
+  left: 0;
+  top: 36.3%;                 /* 421 / 1160 */
+  width: 100%;
+  height: 27.4%;              /* 318 / 1160 */
+  z-index: 2;
+}
+.music img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Большой Лумик на фоне */
+.lumik {
+  position: absolute;
+  left: -0.16%;           
+  bottom: -3.5%;          
+  width: 84.2%;
+  height: auto;
+  transform: rotate(1.91deg);
+  z-index: 3;
+  pointer-events: none;
+}
+.lumik img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Контейнер со статикой/карточками по центру */
+.static {
+  position: absolute;
+  width: 89.58%;              /* 1720 / 1920 */
+  height: 58.10%;             /* 674 / 1160 — сохраняем пропорции макета */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+/* ========= Карточка 1: Songs ========= */
+.band_songs {
+  box-sizing: border-box;
+  position: absolute;
+  width: 30.47%;              /* 524 / 1720 */
+  height: 53.41%;             /* 360 / 674 */
+  left: 0.06%;                /* 1 / 1720 */
+  top: 0.15%;                 /* 1 / 674 */
+
+  background: linear-gradient(120.93deg, rgba(0,0,0,0.25) 4.77%, rgba(57,102,175,0.25) 49.3%, rgba(0,0,0,0.05) 68.74%);
+  border: 1px solid #93E8FF;
+  border-radius: 24px;
+}
+
+.band_text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 83.0%;               /* 435 / 524 */
+  height: 71.1%;              /* 256 / 360 */
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(10px, 2.2vw, 24px);
+}
+
+.text100 {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(44px, 6.5vw, 128px);
+  line-height: 1;
+  text-align: center;
+  color: #B0FFFF;
+}
+
+.text_songs {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 3.2vw, 64px);
+  line-height: 1.2;
+  text-align: center;
+  color: #B0FFFF;
+}
+
+/* ========= Карточка 2: Podcasts (центр) ========= */
+.band_podcasts {
+  box-sizing: border-box;
+  position: absolute;
+  width: 30.47%;              /* 524 / 1720 */
+  height: 46.60%;             /* 314 / 674 */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background: linear-gradient(120.93deg, rgba(0,0,0,0.25) 4.77%, rgba(57,102,175,0.25) 49.3%, rgba(0,0,0,0.05) 68.74%);
+  border: 1px solid #93E8FF;
+  border-radius: 24px;
+}
+
+.band_podcasts_text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 61.64%;              /* 323 / 524 */
+  height: 81.5%;              /* 256 / 314 */
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(10px, 2.2vw, 24px);
+}
+
+.text40 {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(44px, 6.5vw, 128px);
+  line-height: 1;
+  text-align: center;
+  color: #B4ADFF;
+}
+
+.text_podcasts {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 3.2vw, 64px);
+  line-height: 1.2;
+  text-align: center;
+  color: #B4ADFF;
+}
+
+/* ========= Карточка 3: Performers (право-низ) ========= */
+.band_performers {
+  box-sizing: border-box;
+  position: absolute;
+  width: 30.47%;              /* 524 / 1720 */
+  height: 46.60%;             /* 314 / 674 */
+  left: 69.65%;               /* 1198 / 1720 */
+  top: 53.11%;                /* 358 / 674 */
+
+  background: linear-gradient(120.93deg, rgba(0,0,0,0.25) 4.77%, rgba(57,102,175,0.25) 49.3%, rgba(0,0,0,0.05) 68.74%);
+  border: 1px solid #93E8FF;
+  border-radius: 24px;
+}
+
+.band_performers_text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 67.18%;              /* 352 / 524 */
+  height: 81.5%;              /* 256 / 314 */
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(10px, 2.2vw, 24px);
+}
+
+.text20 {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(44px, 6.5vw, 128px);
+  line-height: 1;
+  text-align: center;
+  color: #BAFFDF;
+}
+
+.text_performers {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 3.2vw, 64px);
+  line-height: 1.2;
+  text-align: center;
+  color: #BAFFDF;
+}
+
+/* ===== Тонкая доводка ===== */
+
+/* Ноутбуки / меньше места по высоте */
+@media (max-width: 1366px) {
+  .landingTwo { aspect-ratio: 1920 / 1180; }  /* немного «выше», чтобы не теснилось */
+
+  .text100, .text40, .text20    { font-size: clamp(36px, 6vw, 96px); }
+  .text_songs, .text_podcasts, .text_performers { font-size: clamp(18px, 2.6vw, 48px); }
+
+  .band_songs, .band_podcasts, .band_performers { border-radius: 18px; }
+}
+
+/* Широкие экраны 2K+ — сохраняем масштаб макета и расстояния */
+@media (min-width: 2304px) and (min-aspect-ratio: 16/9) {
+  .landingTwo { aspect-ratio: 1920 / 1160; }
+
+  .text100, .text40, .text20    { font-size: clamp(56px, 6.2vw, 128px); }
+  .text_songs, .text_podcasts, .text_performers { font-size: clamp(22px, 3vw, 64px); }
+
+  .band_songs, .band_podcasts, .band_performers { border-radius: 24px; }
+}
+/* экраны «выше» (уже по ширине): опускаем сильнее */
+@media (max-aspect-ratio: 16/9) {
+  .lumik { bottom: -8%; }
+}
+
+/* классические широкие 16:9 и шире: чуть выше, чтобы не налезал на карточки */
+@media (min-aspect-ratio: 16/9) {
+  .lumik { bottom: -4%; }
+}
+
+/* 2K/4K: ещё на волосок выше, как в макете */
+@media (min-width: 2560px) {
+  .lumik { bottom: -3.5%; }
+}
+
+
+/* .landingTwo {
+  position: absolute;
+  width: 1920px;
+  height: 1160px;
+  left: 0;
+  top: 1160px;
+  background: linear-gradient(180deg, #0B0F1C 0%, #1B2040 100%);
+  z-index: 0;
+  overflow: hidden;
+}
+
+.gradient1 {
+  position: absolute;
+  width: 1920px;
+  height: 1160px;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}    
+
+.gradient2 {
+  position: absolute;
+  width: 1920px;
+  height: 1160px;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+}
+
+.music {  
+  position: absolute;
+  width: 1920px;
+  height: 318px;
+  left: 0px;
+  top: 421px;
+}
+
+.lumik {  
+  position: absolute;
+  width: 1616.42px;
+  height: 1616.42px;
+  left: -3px;
+  top: -220px;
+
+  transform: rotate(1.91deg);
+  z-index: 3;
+}
+
+.static {  
+  position: absolute;
+  width: 1720px;
+  height: 674px;
+  left: calc(50% - 1720px/2 + 2px);
+  top: calc(50% - 674px/2 + 5px);
+  z-index: 4;
+}
+
+.band_songs {  
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 524px;
+  height: 360px;
+  left: 1px;
+  top: 1px;
+
+  background: linear-gradient(120.93deg, rgba(0, 0, 0, 0.25) 4.77%, rgba(57, 102, 175, 0.25) 49.3%, rgba(0, 0, 0, 0.05) 68.74%);
+  border: 1px solid #93E8FF;
+  border-radius: 24px;
+}
+
+.band_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+
+  position: absolute;
+  width: 435px;
+  height: 256px;
+  left: calc(50% - 435px/2 + 0.5px);
+  top: calc(50% - 256px/2);
+}
+
+.text100 {  
+  width: 435px;
+  height: 155px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 155px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #B0FFFF;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.text_songs {
+  width: 435px;
+  height: 77px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #B0FFFF;
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.band_podcasts {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 524px;
+  height: 314px;
+  left: calc(50% - 524px/2 + 2px);
+  top: calc(50% - 314px/2);
+
+  background: linear-gradient(120.93deg, rgba(0, 0, 0, 0.25) 4.77%, rgba(57, 102, 175, 0.25) 49.3%, rgba(0, 0, 0, 0.05) 68.74%);
+  border: 1px solid #93E8FF;
+  border-radius: 24px;
+}
+
+.band_podcasts_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+
+  position: absolute;
+  width: 323px;
+  height: 256px;
+  left: calc(50% - 323px/2 + 0.5px);
+  top: calc(50% - 256px/2);
+}
+
+.text40 {
+  width: 323px;
+  height: 155px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 155px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #B4ADFF;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.text_podcasts {
+  width: 323px;
+  height: 77px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #B4ADFF;
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.band_performers {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 524px;
+  height: 314px;
+  left: 1198px;
+  top: 358px;
+
+  background: linear-gradient(120.93deg, rgba(0, 0, 0, 0.25) 4.77%, rgba(57, 102, 175, 0.25) 49.3%, rgba(0, 0, 0, 0.05) 68.74%);
+  border: 1px solid #93E8FF;
+  border-radius: 24px;
+}
+
+.band_performers_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+
+  position: absolute;
+  width: 352px;
+  height: 256px;
+  left: calc(50% - 352px/2);
+  top: calc(50% - 256px/2);
+}
+
+.text20 {
+  width: 352px;
+  height: 155px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 155px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #BAFFDF;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.text_performers {
+  width: 352px;
+  height: 77px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #BAFFDF;
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+} */

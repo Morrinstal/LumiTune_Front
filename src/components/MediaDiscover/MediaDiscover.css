@@ -1,0 +1,128 @@
+.mediaDiscover {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1186px;
+    height: 2443px;
+    left: 302px;
+    top: 72px;
+
+    background: rgba(12, 12, 12, 0.2);
+
+    border: 1px solid rgba(166, 218, 255, 0.6);
+    border-radius: 20px;
+}
+.newAB_Grid {
+  display: flex;
+  gap: 24px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.mediaContentBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    gap: 0px;
+    position: absolute;
+    width: 1066px;
+    height: 2331px;
+    left: 60px;
+    top: 140px;
+}
+
+.chipGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+
+    width: 338px;
+    height: 33px;
+}
+
+.newPodcasts,
+.popularPodcasts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 14px;
+
+    width: 1066px;
+    height: 503px;
+
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.newAudioBooks,
+.popularAudioBooks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 21px;
+
+    width: 959px;
+    height: 743px;
+    
+    flex: none;
+    flex-grow: 0;
+}
+
+.mediaTitle_block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+
+    gap: 10px;
+
+    width: 1062px;
+    height: 50px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.mediaTitle {
+    height: 39px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #BEF4FF;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 32px;  
+  row-gap: 0;
+}
+
+.mediaContentBlock > .chipGroup + section { 
+    margin-top: 88px; 
+}
+.mediaContentBlock > section + section { 
+    margin-top: 64px; 
+}
+
+

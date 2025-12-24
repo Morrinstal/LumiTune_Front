@@ -1,0 +1,80 @@
+.createPlaylist {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px; 
+    position: absolute;
+    width: 1608px;
+    height: 2249px;
+    left: 302px;
+    top: 72px;
+    
+    background: rgba(12, 12, 12, 0.2);
+
+    border: 1px solid rgba(166, 218, 255, 0.6);
+    border-radius: 16px;
+}
+
+.createPlaylistHeader {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 236px;
+
+    padding: 32px 28px 24px 32px;
+    border-radius: 16px 16px 0 0;
+
+    background-image: url('../../assets/headerCoverHearts.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.createPlaylistTitle {
+    width: 750px;
+    height: 77px;
+    
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 77px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.createPlaylistBody {
+    width: 1607px;
+    height: 1902px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;              
+    padding: 28px 36px 32px; 
+    background: rgba(1, 11, 15, 0.2);
+    border-radius: 20px;
+}
+
+.createPlaylistSearchSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 532px;
+
+    width: 1524px;
+    height: 60px;
+    left: 54px;
+    top: 27px;
+}
+
