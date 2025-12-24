@@ -12,12 +12,11 @@ Tech stack: **React + TypeScript + Vite**.
 - React
 - TypeScript
 - Vite
-- ESLint
 
 ## Getting Started
 
 ### 1) Install dependencies
-```bash
+bash
 npm install
 
 ### 2) Run in development mode
