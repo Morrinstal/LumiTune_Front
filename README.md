@@ -25,3 +25,4 @@ Tech stack: **React + TypeScript + Vite**.
 
 # Backend
 The backend is maintained in a separate repository LumiTune_Back(Django + DRF).
+https://github.com/Morrinstal/LumiTune_Back
